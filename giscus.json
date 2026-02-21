@@ -1,8 +1,7 @@
 {
   "origins": [
-    "https://vonng.github.com/ddia",
-    "https://ddia.vonng.com",
-    "https://ddia.pgsty.com",
+    "https://vonng.github.com/tpme",
+    "https://tpme.vonng.com",
     "http://localhost:1313"
   ],
   "originsRegex": [

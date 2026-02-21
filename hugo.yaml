@@ -10,7 +10,7 @@ hasCJKLanguage: false
 
 services:
   googleAnalytics:
-    ID: G-SGY2FPH1EG
+    ID: G-MET3N14S7Y
 
 outputs:
   home: [HTML]
@@ -151,9 +151,9 @@ params:
     type: giscus
     giscus:
       repo: "Vonng/tpme"
-      repoId: "MDEwOlJlcG9zaXRvcnkxMjA3MTA2NDQ"
+      repoId: "R_kgDORVQ_7A"
       category: "Announcements"
-      categoryId: "DIC_kwDOBzHl9M4CtlWB"
+      categoryId: "DIC_kwDORVQ_7M4C26g5"
       mapping: pathname
       strict: 0
       reactionsEnabled: 1
