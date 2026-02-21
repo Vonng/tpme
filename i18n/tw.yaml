@@ -1,0 +1,13 @@
+backToTop: "返回頂部"
+changeLanguage: "切換語言"
+changeTheme: "切換主題"
+copyright: '<a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Vonng" href="https://blog.vonng.com/"><span>© 2025 馮若航</span></a>'
+dark: "深色"
+editThisPage: "在 GitHub 上編輯此頁 →"
+lastUpdated: "最後更新於"
+light: "淺色"
+noResultsFound: "無結果"
+onThisPage: "此頁上"
+tags: "標籤"
+readMore: "更多 →"
+searchPlaceholder: "搜尋文檔..."

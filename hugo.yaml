@@ -1,0 +1,163 @@
+baseURL: 'https://tpme.vonng.com/'
+languageCode: 'zh-CN'
+title: 'The Product-Minded Engineer'
+
+enableRobotsTXT: true
+# Parse Git commit
+enableGitInfo: true
+# enableEmoji: false
+hasCJKLanguage: false
+
+services:
+  googleAnalytics:
+    ID: G-SGY2FPH1EG
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+defaultContentLanguage: zh
+languages:
+  zh:
+    languageName: 简体中文
+    languageCode: en
+    contentDir: content/zh
+    weight: 1
+    title: 产品思维的工程师
+  #en:
+  #  languageName: English
+  #  languageCode: en
+  #  contentDir: content/en
+  #  weight: 2
+  #  title: The Product-Minded Engineer
+
+markup:
+  goldmark:
+    extensions:
+      footnote: true         # 开启脚注语法：[^id] / [^id]: text
+      linkify: true          # 自动将 URL 文本转为链接
+      table: true            # 启用 Markdown 表格
+      taskList: true         # 启用任务列表 [ ] / [x]
+      typographer: true      # 智能排版（引号、破折号等）
+      passthrough:
+        enable: true         # 允许将数学定界符透传给 Hextra 的数学渲染器
+        delimiters:
+          block:
+            - ['\[', '\]']
+            - ['$$', '$$']
+          inline:
+            - ['\(', '\)']
+    parser:
+      attribute: true        # 允许在标题后写 {#id .class key=val}，用于显式锚点
+      autoHeadingID: true    # 为标题自动生成 ID（手写 {#id} 会覆盖自动生成）
+      autoHeadingIDType: github  # 自动 ID 规则：github / blackfriday / none
+    renderer:
+      unsafe: true           # 允许 Markdown 中的原生 HTML（如 <a>、<details>）按原样渲染
+  tableOfContents:
+    startLevel: 2            # ToC 从 h2 开始
+    endLevel: 4              # ToC 到 h4 结束
+
+menu:
+  main:
+    - name: Search
+      weight: 1
+      params:
+        type: search
+    - name: GitHub
+      weight: 2
+      url: "https://github.com/Vonng/tpme"
+      params:
+        icon: github
+
+  sidebar:
+    - identifier: links
+      name: Links
+      params:
+        type: separator
+      weight: 1
+    - identifier: oreilly-tpme
+      name: "TPME on O'Reilly ↗"
+      url: "https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/"
+      weight: 2
+    - identifier: author
+      name: "Author: Drew Hoskins ↗"
+      url: "https://drewhoskins.substack.com/"
+      weight: 3
+
+
+params:
+  description: The Product-Minded Engineer. HTML-to-Markdown conversion with stable anchors, internal links, footnotes, and figures.
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: /logo.png
+      dark: /logo.png
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: full
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: false
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  # Display the last modification date
+  displayUpdatedDate: true
+  dateFormat: "2006-01-02"
+
+  # Search
+  # flexsearch is enabled by default
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
+
+  editURL:
+    enable: true
+    base: "https://github.com/Vonng/tpme/edit/main/content"
+
+  toc:
+    displayTags: true
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  comments:
+    enable: false
+    type: giscus
+    giscus:
+      repo: "Vonng/tpme"
+      repoId: "MDEwOlJlcG9zaXRvcnkxMjA3MTA2NDQ"
+      category: "Announcements"
+      categoryId: "DIC_kwDOBzHl9M4CtlWB"
+      mapping: pathname
+      strict: 0
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: bottom
+      lang: zh-CN
+      theme: preferred_color_scheme
