@@ -1,163 +1,147 @@
-baseURL: 'https://tpme.vonng.com/'
-locale: 'zh-CN'
-title: 'The Product-Minded Engineer'
-
+baseURL: https://tpme.vonng.com/
+title: The Product-Minded Engineer
+defaultContentLanguage: zh
+hasCJKLanguage: true
 enableRobotsTXT: true
-# Parse Git commit
 enableGitInfo: true
-# enableEmoji: false
-hasCJKLanguage: false
 
 services:
   googleAnalytics:
-    ID: G-MET3N14S7Y
+    id: G-MET3N14S7Y
 
 outputs:
-  home: [HTML]
-  page: [HTML]
-  section: [HTML, RSS]
+  home: [HTML, markdown, LLMS]
+  page: [HTML, markdown]
+  section: [HTML, RSS, print, markdown]
 
 module:
   imports:
-    - path: github.com/imfing/hextra
+    - path: github.com/pgsty/oink
+  hugoVersion:
+    extended: true
+    min: 0.160.1
 
-defaultContentLanguage: zh
 languages:
   zh:
     label: 简体中文
     locale: zh-CN
     contentDir: content/zh
     weight: 1
-    title: 产品思维的工程师
-  #en:
-  #  label: English
-  #  locale: en-US
-  #  contentDir: content/en
-  #  weight: 2
-  #  title: The Product-Minded Engineer
+    title: 产品思维工程师
+    params:
+      description: >-
+        《产品思维工程师》中文译本：从用户场景、交互设计与反馈闭环出发，
+        构建真正有影响力的软件。
+      time_format_default: 2006年1月2日
+      ui:
+        command_palette:
+          commands:
+            - id: start_reading
+              title: 从序言开始阅读
+              description: 认识产品思维工程师与本书结构
+              url: /preface/
+              icon: fa-solid fa-book-open
+              keywords: [开始, 阅读, 序言]
+            - id: open_contents
+              title: 打开全书目录
+              description: 浏览四个部分与九个章节
+              url: /toc/
+              icon: fa-solid fa-list
+              keywords: [目录, 章节, 导航]
 
 markup:
   goldmark:
     extensions:
-      footnote: true         # 开启脚注语法：[^id] / [^id]: text
-      linkify: true          # 自动将 URL 文本转为链接
-      table: true            # 启用 Markdown 表格
-      taskList: true         # 启用任务列表 [ ] / [x]
-      typographer: true      # 智能排版（引号、破折号等）
+      footnote: true
+      linkify: true
+      table: true
+      taskList: true
+      typographer: true
       passthrough:
-        enable: true         # 允许将数学定界符透传给 Hextra 的数学渲染器
+        enable: true
         delimiters:
-          block:
-            - ['\[', '\]']
-            - ['$$', '$$']
-          inline:
-            - ['\(', '\)']
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
     parser:
-      attribute: true        # 允许在标题后写 {#id .class key=val}，用于显式锚点
-      autoHeadingID: true    # 为标题自动生成 ID（手写 {#id} 会覆盖自动生成）
-      autoHeadingIDType: github  # 自动 ID 规则：github / blackfriday / none
+      attribute:
+        block: true
+        title: true
+      autoHeadingID: true
+      autoHeadingIDType: github
     renderer:
-      unsafe: true           # 允许 Markdown 中的原生 HTML（如 <a>、<details>）按原样渲染
+      unsafe: true
+  highlight:
+    noClasses: false
   tableOfContents:
-    startLevel: 2            # ToC 从 h2 开始
-    endLevel: 4              # ToC 到 h4 结束
+    startLevel: 2
+    endLevel: 4
 
-menu:
+menus:
   main:
-    - name: Search
-      weight: 1
+    - identifier: contents
+      name: 目录
+      pageRef: /toc
+      weight: 10
+    - identifier: preface
+      name: 序言
+      pageRef: /preface
+      weight: 20
+    - identifier: original
+      name: 英文原版
+      url: https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/
+      weight: 30
       params:
-        type: search
-    - name: GitHub
-      weight: 2
-      url: "https://github.com/Vonng/tpme"
+        icon: fa-solid fa-arrow-up-right-from-square
+    - identifier: github
+      name: GitHub
+      url: https://github.com/Vonng/tpme
+      weight: 90
       params:
-        icon: github
-
-  sidebar:
-    - identifier: links
-      name: Links
-      params:
-        type: separator
-      weight: 1
-    - identifier: oreilly-tpme
-      name: "TPME on O'Reilly ↗"
-      url: "https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/"
-      weight: 2
-    - identifier: author
-      name: "Author: Drew Hoskins ↗"
-      url: "https://drewhoskins.substack.com/"
-      weight: 3
-
+        icon: fa-brands fa-github
 
 params:
-  description: The Product-Minded Engineer. HTML-to-Markdown conversion with stable anchors, internal links, footnotes, and figures.
-
-  navbar:
-    displayTitle: true
-    displayLogo: true
-    logo:
-      path: /logo.png
-      dark: /logo.png
-    width: wide
-
-  page:
-    # full (100%), wide (90rem), normal (80rem)
-    width: full
-
-  theme:
-    # light | dark | system
-    default: system
-    displayToggle: true
-
-  footer:
-    enable: false
-    displayCopyright: true
-    displayPoweredBy: false
-    width: normal
-
-  # Display the last modification date
-  displayUpdatedDate: true
-  dateFormat: "2006-01-02"
-
-  # Search
-  # flexsearch is enabled by default
-  search:
-    enable: true
-    type: flexsearch
-
-    flexsearch:
-      # index page by: content | summary | heading | title
-      index: content
-      # full | forward | reverse | strict
-      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
-      tokenize: forward
-
-  editURL:
-    enable: true
-    base: "https://github.com/Vonng/tpme/edit/main/content"
-
-  toc:
-    displayTags: true
-
-  highlight:
-    copy:
+  description: >-
+    《产品思维工程师》中文译本：从用户场景、交互设计与反馈闭环出发，
+    构建真正有影响力的软件。
+  logo: logo.png
+  github_repo: https://github.com/Vonng/tpme
+  github_subdir: ''
+  offlineSearch: true
+  offlineSearchIndex: summary
+  offlineSearchSummaryLength: 90
+  offlineSearchMaxResults: 12
+  page_width: wide
+  copyright:
+    authors: >-
+      中文翻译 [Vonng](https://vonng.com) · 原著 Drew Hoskins ·
+      [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+    from_year: 2026
+    to_year: present
+  ui:
+    typography:
+      preset: system
+    shell_types: [docs]
+    docs_section: ''
+    quick_links: [contents, preface]
+    sidebar_icon_policy: groups
+    sidebar_menu_compact: false
+    sidebar_menu_foldable: false
+    sidebar_root_enabled: true
+    sidebar_root_menu: false
+    sidebar_width_min: 260
+    sidebar_width_max: 360
+    sidebar_item_overflow: wrap
+    ul_show: 2
+    page_context_menu:
       enable: true
-      # hover | always
-      display: hover
-
-  comments:
-    enable: false
-    type: giscus
-    giscus:
-      repo: "Vonng/tpme"
-      repoId: "R_kgDORVQ_7A"
-      category: "Announcements"
-      categoryId: "DIC_kwDORVQ_7M4C26g5"
-      mapping: pathname
-      strict: 0
-      reactionsEnabled: 1
-      emitMetadata: 0
-      inputPosition: bottom
-      lang: zh-CN
-      theme: preferred_color_scheme
+      assistant_links: false
+      links: []
+    showLightDarkModeMenu: true
+    image_zoom:
+      enable: true
+    feedback:
+      enable: false
+    readingtime:
+      enable: true
+  print:
+    disable_toc: false

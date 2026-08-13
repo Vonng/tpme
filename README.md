@@ -7,7 +7,7 @@
 
 **译者**：[冯若航](https://vonng.com) / [Vonng](https://github.com/Vonng) (rh@vonng.com) [Pigsty](https://pgsty.com) 创始人，[活跃](https://committers.top/china)[开源贡献者](https://gitstar-ranking.com/Vonng)，PostgreSQL Hacker。开源 RDS PG 发行版 [Pigsty](https://pigsty.cc/zh/) 与公众号《[老冯云数](https://mp.weixin.qq.com/s/p4Ys10ZdEDAuqNAiRmcnIQ)》作者，[数据库老司机](https://pigsty.cc/zh/blog/db)，[云计算泥石流](https://pigsty.cc/zh/blog/cloud)，曾于阿里，苹果，探探担任架构师与DBA。
 
-**阅读**：访问 [https://tpme.vonng.com](https://tpme.vonng.com) 阅读本书在线版本，或使用 [hugo](https://gohugo.io/documentation/) / [hextra](https://imfing.github.io/hextra/zh-cn/) 主题自行构建。
+**阅读**：访问 [https://tpme.vonng.com](https://tpme.vonng.com) 阅读本书在线版本，或使用 [Hugo](https://gohugo.io/documentation/) / [OINK](https://oink.pgsty.com/) 主题自行构建。
 
 
 ---------

@@ -1,0 +1,124 @@
+sections:
+  - hero
+  - metrics
+  - type: cards
+    key: journey
+  - principles
+  - cta
+
+hero:
+  eyebrow: 中文译本 · Drew Hoskins 著 · Vonng 译
+  title_lines:
+    - 产品思维
+    - 工程师
+  lead: >-
+    不只把东西做对，更要知道做什么是对的。<br>
+    从用户场景出发，构建真正有影响力的软件。
+  image:
+    light: title.jpg
+    dark: title.jpg
+    alt: 《产品思维工程师》封面
+  actions:
+    - label: 开始阅读
+      url: preface/
+      icon: fa-solid fa-book-open
+      style: primary
+    - label: 浏览目录
+      url: toc/
+      icon: fa-solid fa-list
+      style: ghost
+  detail:
+    label: 在 O'Reilly 阅读英文原版
+    url: https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/
+    icon: fa-solid fa-arrow-up-right-from-square
+    external: true
+
+metrics:
+  eyebrow: 全书概览
+  title: 从工程实现走向用户影响
+  items:
+    - value: '4'
+      label: 产品生命周期阶段
+      desc: 探索、定义、开发与交付
+      icon: fa-solid fa-diamond
+    - value: '9'
+      label: 核心章节
+      desc: 从场景思维到产品架构
+      icon: fa-solid fa-book
+    - value: '1'
+      label: 核心目标
+      desc: 为用户构建有影响力的软件
+      icon: fa-solid fa-bullseye
+
+journey:
+  eyebrow: 阅读路径
+  title: 沿着产品生命周期，建立完整的产品思维
+  text: 本书从工程师最熟悉的开发与交付讲起，再回到探索与定义；你也可以按当前问题直接进入任一部分。
+  columns: 4
+  link_label: 进入本部分
+  items:
+    - title: 开发与打磨
+      meta: 第一部分 · 第 1–2 章
+      icon: fa-solid fa-screwdriver-wrench
+      desc: 从场景出发，理解用户如何发现、理解并使用产品，打磨命名、界面与产品细节。
+      url: part-i/
+    - title: 交付
+      meta: 第二部分 · 第 3–5 章
+      icon: fa-solid fa-rocket
+      desc: 写出可行动的错误信息，亲自体验产品，并通过反馈、指标与实验持续迭代。
+      url: part-ii/
+    - title: 探索
+      meta: 第三部分 · 第 6–7 章
+      icon: fa-solid fa-compass
+      desc: 认识目标受众，用访谈、人物画像与模拟场景发现真正值得解决的问题。
+      url: part-iii/
+    - title: 定义
+      meta: 第四部分 · 第 8–9 章
+      icon: fa-solid fa-pen-ruler
+      desc: 把洞察转化为交互设计与产品架构，在功能、复杂度和非功能需求之间做出取舍。
+      url: part-iv/
+
+principles:
+  eyebrow: 你会获得什么
+  title: 把产品能力融入每一次工程决策
+  items:
+    - icon: fa-solid fa-users
+      title: 理解具体的用户
+      text: 用人物画像与场景取代抽象猜测，理解用户真正想完成什么。
+    - icon: fa-solid fa-route
+      title: 设计完整的旅程
+      text: 同时关注发现、理解与使用，让命名、错误信息和文档成为产品的一部分。
+    - icon: fa-solid fa-arrows-rotate
+      title: 建立反馈闭环
+      text: 通过内部试用、用户反馈、实验与指标验证假设，并持续修正方向。
+
+cta:
+  title: 从序言开始，认识生活在系统与用户边界上的工程师。
+  text: 全书共九章，也可以先浏览目录，按你正在解决的问题阅读。
+  actions:
+    - label: 开始阅读
+      url: preface/
+      icon: fa-solid fa-arrow-right
+      style: primary
+    - label: 查看目录
+      url: toc/
+      icon: fa-solid fa-list
+      style: ghost
+
+footer:
+  brand:
+    name: 产品思维工程师
+    logo: logo.png
+    tagline: '**系统思维** × **产品思维**'
+    slogan: 中文翻译仅供学习研究，请支持英文原版。
+  columns:
+    - title: 阅读
+      links:
+        - { label: 序言, url: preface/ }
+        - { label: 全书目录, url: toc/ }
+        - { label: 索引, url: indexes/ }
+    - title: 关于
+      links:
+        - { label: 关于作者, url: colophon/ }
+        - { label: 英文原版, url: 'https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/', external: true }
+        - { label: 项目源码, url: 'https://github.com/Vonng/tpme', external: true }

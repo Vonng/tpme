@@ -1,0 +1,30 @@
+// TPME is a long-form book rather than a conventional product manual. Keep
+// article measure readable while giving the translated chapter names room in
+// the navigation rail.
+.td-shell-article .td-content {
+  --td-content-max-width: 52rem;
+}
+
+.oink-hero__media {
+  max-width: 340px;
+  aspect-ratio: 400 / 525;
+  transform: none;
+  border-radius: 12px;
+  filter: drop-shadow(0 24px 32px rgba(23, 42, 66, 0.2));
+}
+
+.oink-hero__title > span {
+  white-space: normal;
+}
+
+.oink-card__media {
+  color: var(--oink-blue);
+  font-size: 1.35rem;
+}
+
+@media (max-width: 767.98px) {
+  .oink-hero__media {
+    max-width: 220px;
+    justify-self: center;
+  }
+}
