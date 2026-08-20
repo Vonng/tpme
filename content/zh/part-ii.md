@@ -1,5 +1,7 @@
 ---
-title: "第二部分：交付"
+title: "交付"
+book_kind: part
+book_number: II
 weight: 200
 breadcrumbs: false
 ---
@@ -21,6 +23,6 @@ breadcrumbs: false
 
 接下来的两章将介绍一些成本效益极高的方法，帮助你基于用户验证来迭代交付并持续打磨软件产品。
 
-在发布之前，你会通过 [Chapter 4](/en/ch4#ch04_dogfooding) 的内容，先让产品承受早期压力：你和同事会亲自试用软件、进行测试、撰写摩擦日志，并认真编写文档。
+在发布之前，你会通过 {{< xref page="/ch4" anchor="ch04_dogfooding" >}}Chapter 4{{< /xref >}} 的内容，先让产品承受早期压力：你和同事会亲自试用软件、进行测试、撰写摩擦日志，并认真编写文档。
 
-[Chapter 5](/en/ch5#ch05_user_feedback) 将聚焦发布之后：如何通过反馈、实验和指标，听见真实用户的声音。
+{{< xref page="/ch5" anchor="ch05_user_feedback" >}}Chapter 5{{< /xref >}} 将聚焦发布之后：如何通过反馈、实验和指标，听见真实用户的声音。

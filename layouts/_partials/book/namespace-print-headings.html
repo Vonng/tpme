@@ -1,0 +1,17 @@
+{{- /* OINK namespaces generated headings in a whole-Book document. Goldmark
+       footnote IDs are also page-local, so namespace those here as well. */ -}}
+{{- $page := .page -}}
+{{- $content := printf "%s" .content -}}
+{{- range $anchor := $page.Fragments.Identifiers -}}
+  {{- $target := partial "book/aggregate-heading-anchor.html" (dict "page" $page "anchor" $anchor) -}}
+  {{- $content = replace $content (printf `id="%s"` $anchor) (printf `id="%s"` $target) -}}
+  {{- $content = replace $content (printf `href="#%s"` $anchor) (printf `href="#%s"` $target) -}}
+  {{- $content = replace $content (printf `href="%s#%s"` $page.RelPermalink $anchor) (printf `href="#%s"` $target) -}}
+{{- end -}}
+{{- range $match := findRESubmatch `id="(fn(?:ref)?:[^"]+)"` $content -}}
+  {{- $anchor := index $match 1 -}}
+  {{- $target := printf "pg-%s-%s" $page.File.UniqueID $anchor -}}
+  {{- $content = replace $content (printf `id="%s"` $anchor) (printf `id="%s"` $target) -}}
+  {{- $content = replace $content (printf `href="#%s"` $anchor) (printf `href="#%s"` $target) -}}
+{{- end -}}
+{{- return ($content | safeHTML) -}}

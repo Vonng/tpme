@@ -1,0 +1,29 @@
+brand:
+  name: 产品思维工程师
+  logo: logo.png
+  tagline: '**系统思维** × **产品思维**'
+  slogan: 中文翻译仅供学习研究，请支持英文原版。
+columns:
+  - title: 阅读
+    links:
+      - { label: 章节目录, url: '#chapters' }
+      - { label: 从序言开始, url: preface/ }
+      - { label: 完整目录, url: toc/ }
+      - { label: 打印本书, url: _print/ }
+  - title: 全书
+    links:
+      - { label: 开发与打磨, url: part-i/ }
+      - { label: 交付, url: part-ii/ }
+      - { label: 探索, url: part-iii/ }
+      - { label: 定义, url: part-iv/ }
+  - title: 作者与译者
+    links:
+      - { label: Drew Hoskins, url: 'https://drewhoskins.substack.com/', external: true }
+      - { label: 冯若航 / Vonng, url: 'https://vonng.com', external: true }
+      - { label: 英文原版, url: 'https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/', external: true }
+  - title: 项目
+    links:
+      - { label: GitHub 仓库, url: 'https://github.com/Vonng/tpme', external: true }
+      - { label: 提交问题, url: 'https://github.com/Vonng/tpme/issues', external: true }
+      - { label: CC BY 4.0, url: 'https://creativecommons.org/licenses/by/4.0/', external: true }
+      - { label: Oink 主题, url: 'https://oink.pgsty.com', external: true }

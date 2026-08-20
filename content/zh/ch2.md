@@ -1,5 +1,8 @@
 ---
-title: "2. 引导用户使用你的产品"
+title: "引导用户使用你的产品"
+book_kind: chapter
+book_number: "2"
+book_part: I
 weight: 102
 breadcrumbs: false
 ---
@@ -44,23 +47,17 @@ breadcrumbs: false
 
 ### 案例研究导入 {#id21}
 
-在<a id="CSuj02"></a> 2000 年代中期，微软<a id="id361"></a>在 Office 套件（Word、Excel、PowerPoint）上遇到巨大问题：系统过于复杂，用户难以理解并定位自己需要的功能。到 2003 年，Microsoft Word 除了下拉菜单外，还有 31 个工具栏和 19 个任务窗格。根据产品经理 Jensen Harris 的相关演讲，[图 2-1](/en/ch2#office_2003) 展示了典型会话截图。
+在<a id="CSuj02"></a> 2000 年代中期，微软<a id="id361"></a>在 Office 套件（Word、Excel、PowerPoint）上遇到巨大问题：系统过于复杂，用户难以理解并定位自己需要的功能。到 2003 年，Microsoft Word 除了下拉菜单外，还有 31 个工具栏和 19 个任务窗格。根据产品经理 Jensen Harris 的相关演讲，{{< xref fig="2-1" page="/ch2" anchor="office_2003" >}}图 2-1{{< /xref >}} 展示了典型会话截图。
 
 通过对数百名用户的访谈，团队发现用户很难发现功能，也难以建立对软件的掌控感。许多呼声很高的功能虽然被做出来了，但用户找不到它们。
 
-到了 Office 2007，微软将<a id="id362"></a><a id="id363"></a>“Ribbon（功能区）”菜单系统引入其 Office 桌面应用，如 [图 2-2](/en/ch2#ribbon_overview) 所示；同时还有<a id="id364"></a><a id="id365"></a>在选中文本时弹出的上下文菜单，如 [图 2-3](/en/ch2#context_popup) 所示。
+到了 Office 2007，微软将<a id="id362"></a><a id="id363"></a>“Ribbon（功能区）”菜单系统引入其 Office 桌面应用，如 {{< xref fig="2-2" page="/ch2" anchor="ribbon_overview" >}}图 2-2{{< /xref >}} 所示；同时还有<a id="id364"></a><a id="id365"></a>在选中文本时弹出的上下文菜单，如 {{< xref fig="2-3" page="/ch2" anchor="context_popup" >}}图 2-3{{< /xref >}} 所示。
 
-![2003 版 Microsoft Word 的凌乱截图](/fig/tpme_0201.png)
+{{< fig num="2-1" id="office_2003" src="/fig/tpme_0201.png" caption="2003 版 Microsoft Word 的凌乱截图" alt="2003 版 Microsoft Word 的凌乱截图" />}}
 
-###### 图 2-1. 2003 版 Microsoft Word 的凌乱截图 {#office_2003}
+{{< fig num="2-2" id="ribbon_overview" src="/fig/tpme_0202.png" caption="2025 年 Windows 版 Microsoft Word 的功能区" alt="2025 年 Windows 版 Microsoft Word 的功能区" />}}
 
-![2025 年 Windows 版 Microsoft Word 的功能区](/fig/tpme_0202.png)
-
-###### 图 2-2. 2025 年 Windows 版 Microsoft Word 的功能区 {#ribbon_overview}
-
-![2025 年 Windows 版 Microsoft Word 的上下文弹窗](/fig/tpme_0203.png)
-
-###### 图 2-3. 2025 年 Windows 版 Microsoft Word 的上下文弹窗 {#context_popup}
+{{< fig num="2-3" id="context_popup" src="/fig/tpme_0203.png" caption="2025 年 Windows 版 Microsoft Word 的上下文弹窗" alt="2025 年 Windows 版 Microsoft Word 的上下文弹窗" />}}
 
 在<a id="id366"></a><a id="id367"></a>设计这次改版时，团队收集了数千项功能的使用频率，并将它们重组为新的层级化菜单设计，同时引入了新的功能呈现方式。这些变化让高度复杂的应用对许多用户更容易上手，并且迄今经受住了时间考验。理解其“怎么做、为什么做”，能为我们在自己的应用中引导用户旅程提供线索。
 
@@ -74,7 +71,7 @@ breadcrumbs: false
 
 如果<a id="id370"></a>你负责交付某项功能，就必须对这三个方面都负责。让功能可见、帮助用户理解、引导用户安全使用，都是你团队的责任。漏掉其中任何一个，你的功能都无法产生应有影响。
 
-如 [第 1 章](/en/ch1#ch01_foundations_prod) 所述，你应该能讲出一个可信的故事，让用户贯穿三个阶段且没有情节漏洞。确保覆盖这三类主要场景，是消除漏洞的好方法。并且在针对每个场景时，还要继续补全更多覆盖细节的故事。
+如 {{< xref page="/ch1" anchor="ch01_foundations_prod" >}}第 1 章{{< /xref >}} 所述，你应该能讲出一个可信的故事，让用户贯穿三个阶段且没有情节漏洞。确保覆盖这三类主要场景，是消除漏洞的好方法。并且在针对每个场景时，还要继续补全更多覆盖细节的故事。
 
 ### 发现场景 {#id188}
 
@@ -88,11 +85,9 @@ breadcrumbs: false
 
 产品发现图（Product Discovery Map, PDM）<a id="pdm02"></a><a id="pdismap02"></a><a id="DSpdm02"></a>可以帮助你绘制用户学习产品时会走过的路径。假设你在复查产品实现，想确认用户能找到在 Word 中制作简报所需的关键排版功能。这类用户会想做多栏布局、使用横向页面、在正文中嵌入图片，而且很可能会把这些技巧组合使用。
 
-我们聚焦“连续分节符（Continuous Section Break）”的发现过程，这个概念你很确定用户一开始并不理解。[图 2-4](/en/ch2#layout_menu) 展示了 Microsoft Word 的“布局”菜单，并展开了“分隔符”下拉菜单。
+我们聚焦“连续分节符（Continuous Section Break）”的发现过程，这个概念你很确定用户一开始并不理解。{{< xref fig="2-4" page="/ch2" anchor="layout_menu" >}}图 2-4{{< /xref >}} 展示了 Microsoft Word 的“布局”菜单，并展开了“分隔符”下拉菜单。
 
-![Microsoft Word 的布局菜单](/fig/tpme_0204.png)
-
-###### 图 2-4. Microsoft Word 的布局菜单 {#layout_menu}
+{{< fig num="2-4" id="layout_menu" src="/fig/tpme_0204.png" caption="Microsoft Word 的布局菜单" alt="Microsoft Word 的布局菜单" />}}
 
 下面是 Yves 的一个用户场景。Yves 所代表的是一类轻度使用者人物画像：偶尔用 Office 做社区活动宣传的人。
 
@@ -102,11 +97,9 @@ breadcrumbs: false
 
 - 每张图都针对一个特定客户画像，表示其如何在产品中“走迷宫”。
 - 每个节点代表产品中的一个元素。
-- 每条边表示该画像如何发现相关知识，如 [图 2-5](/en/ch2#layout_scenario_pdm) 所示的 Yves 旅程。
+- 每条边表示该画像如何发现相关知识，如 {{< xref fig="2-5" page="/ch2" anchor="layout_scenario_pdm" >}}图 2-5{{< /xref >}} 所示的 Yves 旅程。
 
-![连续分节符的 PDM](/fig/tpme_0205.png)
-
-###### 图 2-5. 连续分节符的 PDM {#layout_scenario_pdm}
+{{< fig num="2-5" id="layout_scenario_pdm" src="/fig/tpme_0205.png" caption="连续分节符的 PDM" alt="连续分节符的 PDM" />}}
 
 这张图假设 Yves 知道什么是“分栏”，但不知道什么是“分节符”；同时它展示了他成功走到正确功能的一条路径。
 
@@ -116,13 +109,13 @@ breadcrumbs: false
 
 #### 利用用户已有知识 {#id23}
 
-在 [第 1 章](/en/ch1#ch01_foundations_prod) 中，我<a id="id375"></a><a id="id376"></a>说过，人物画像有其“手段”——他们带来了哪些技能与知识？
+在 {{< xref page="/ch1" anchor="ch01_foundations_prod" >}}第 1 章{{< /xref >}} 中，我<a id="id375"></a><a id="id376"></a>说过，人物画像有其“手段”——他们带来了哪些技能与知识？
 
 你的产品呈现的一组名称与概念，以及这些概念之间的关系，称为<a id="id377"></a>*本体*（ontology）。本体本质上是一张图。用户对产品本体越熟悉，理解越深入，使用也越有效。
 
 让东西更容易被发现的最简单方式，就是使用用户本体里已经有的名称和概念。也就是，不要重复造轮子。
 
-在“布局”菜单这个例子里，Yves 知道“分栏（Column）”，但面对“连续分节符（Continuous Section Break）”时，他只带着“分节（section）”这个概念进入。观察 [图 2-4](/en/ch2#layout_menu) 就能看到，微软在“分隔符”上的设计要比“分栏”谨慎得多：他们必须提供更详细的说明和图示，来弥补命名上的陌生感。
+在“布局”菜单这个例子里，Yves 知道“分栏（Column）”，但面对“连续分节符（Continuous Section Break）”时，他只带着“分节（section）”这个概念进入。观察 {{< xref fig="2-4" page="/ch2" anchor="layout_menu" >}}图 2-4{{< /xref >}} 就能看到，微软在“分隔符”上的设计要比“分栏”谨慎得多：他们必须提供更详细的说明和图示，来弥补命名上的陌生感。
 
 ##### 编码实践 {#id378}
 
@@ -142,11 +135,9 @@ breadcrumbs: false
 
 当然，语言里<a id="DSmult02"></a><a id="id382"></a><a id="id383"></a>有同义词和相关概念，但你的本体里通常只能选一个主叫法。你需要给那些带着不同猜测进入的用户提供通向它的路径。<a id="id384"></a>
 
-举个<a id="id385"></a><a id="id386"></a>例子，功能区提供了好用的命令搜索框，并支持一定的模糊匹配。如果我在框里输入“Margin”，它会返回含有“Indent”的命令，如 [图 2-6](/en/ch2#indent_margin) 所示。我甚至可以直接在该菜单中操作这些命令。
+举个<a id="id385"></a><a id="id386"></a>例子，功能区提供了好用的命令搜索框，并支持一定的模糊匹配。如果我在框里输入“Margin”，它会返回含有“Indent”的命令，如 {{< xref fig="2-6" page="/ch2" anchor="indent_margin" >}}图 2-6{{< /xref >}} 所示。我甚至可以直接在该菜单中操作这些命令。
 
-![在 Word 中搜索 'margin'](/fig/tpme_0206.png)
-
-###### 图 2-6. 在 Word 中搜索 *margin* {#indent_margin}
+{{< fig num="2-6" id="indent_margin" src="/fig/tpme_0206.png" caption="在 Word 中搜索 margin" alt="在 Word 中搜索 'margin'" />}}
 
 ##### 编码实践 {#id387}
 
@@ -168,11 +159,9 @@ breadcrumbs: false
 - “Break”和“Continuous Section Break”同时用图标与文本表达。不同用户可能更容易通过其中一种形式找到它。
 - 提供搜索框；如果 Yves 知道“section”这个词却不知道在哪个菜单，这就很有帮助。它修复了传统菜单的一个根本问题。
 
-[图 2-7](/en/ch2#bushy_layout_pdm) 展示了 Yves 可能发现连续分节符的多种有效路径。
+{{< xref fig="2-7" page="/ch2" anchor="bushy_layout_pdm" >}}图 2-7{{< /xref >}} 展示了 Yves 可能发现连续分节符的多种有效路径。
 
-![发现连续分节符的多条路径](/fig/tpme_0207.png)
-
-###### 图 2-7. 发现连续分节符的多条路径 {#bushy_layout_pdm}
+{{< fig num="2-7" id="bushy_layout_pdm" src="/fig/tpme_0207.png" caption="发现连续分节符的多条路径" alt="发现连续分节符的多条路径" />}}
 
 以下是用户发现你产品的几条<a id="id392"></a>常见路径：
 
@@ -190,19 +179,15 @@ breadcrumbs: false
 
 为了驾驭这种功能扩张，设计师会向用户*优雅地揭示复杂性*。
 
-看看功能区。即使已经改进，它仍有太多命令和目标画像，难以让菜单始终易用，因此微软引入了<a id="id394"></a><a id="id395"></a>“上下文菜单”的概念。它只在合适时机出现。[图 2-8](/en/ch2#shape_context) 展示了“形状格式”选项卡：除非你点击了形状，否则它不会挤占界面空间。
+看看功能区。即使已经改进，它仍有太多命令和目标画像，难以让菜单始终易用，因此微软引入了<a id="id394"></a><a id="id395"></a>“上下文菜单”的概念。它只在合适时机出现。{{< xref fig="2-8" page="/ch2" anchor="shape_context" >}}图 2-8{{< /xref >}} 展示了“形状格式”选项卡：除非你点击了形状，否则它不会挤占界面空间。
 
-![功能区中的上下文菜单](/fig/tpme_0208.png)
+{{< fig num="2-8" id="shape_context" src="/fig/tpme_0208.png" caption="功能区中的上下文菜单" alt="功能区中的上下文菜单" />}}
 
-###### 图 2-8. 功能区中的上下文菜单 {#shape_context}
-
-功能区默认有九个选项卡，已经接近令人不堪重负，这在产品发现图里很容易看出来。通过把“形状格式”节点下移到图的更深层级（见 [图 2-9](/en/ch2#shape_format_pdm)），这种优雅揭示避免了问题恶化。
+功能区默认有九个选项卡，已经接近令人不堪重负，这在产品发现图里很容易看出来。通过把“形状格式”节点下移到图的更深层级（见 {{< xref fig="2-9" page="/ch2" anchor="shape_format_pdm" >}}图 2-9{{< /xref >}}），这种优雅揭示避免了问题恶化。
 
 Word 还通过上下文菜单实现优雅揭示：当你高亮文本时，鼠标旁会弹出包含加粗、斜体等常用命令的菜单。这类菜单会主动出现，可发现性很强；同时选项很少，用户也更容易快速扫描到所需工具。
 
-![用于发现“形状格式”选项卡的 PDM](/fig/tpme_0209.png)
-
-###### 图 2-9. 用于发现“形状格式”选项卡的 PDM {#shape_format_pdm}
+{{< fig num="2-9" id="shape_format_pdm" src="/fig/tpme_0209.png" caption="用于发现“形状格式”选项卡的 PDM" alt="用于发现“形状格式”选项卡的 PDM" />}}
 
 #### 多人物画像设计 {#id26}
 
@@ -233,11 +218,9 @@ Microsoft Word 服务的人群非常广，从需要章节导航的小说作者�
 
 举个例子，最近我在多个应用里都看到小型聊天机器人控件弹出。Microsoft Word 在我的光标旁有一个“Draft with Copilot”上下文菜单<a id="id409"></a><a id="id410"></a>。此前我并不知道 Word 有这个能力。我也不完全确定这个聊天机器人能为我做什么，但至少我可以去探索。一个“未知的未知”就这样变成了“已知的未知”。
 
-你还要认真思考菜单里省略了什么。用户可能并不知道缺失命令可以在别处找到。Word 在“布局”选项卡里展示了全部 Break 类型，但在“插入”选项卡只放了“分页符（Page Break）”，如 [图 2-10](/en/ch2#page_break_alone) 所示。这样设计的风险是：没看到“布局”选项卡的用户可能误以为分页符是唯一选项。权衡点在于，相比埋在更模糊的“Break”命令下，单独露出的“Page Break”确实更易被发现。<a id="id411"></a><a id="id412"></a>
+你还要认真思考菜单里省略了什么。用户可能并不知道缺失命令可以在别处找到。Word 在“布局”选项卡里展示了全部 Break 类型，但在“插入”选项卡只放了“分页符（Page Break）”，如 {{< xref fig="2-10" page="/ch2" anchor="page_break_alone" >}}图 2-10{{< /xref >}} 所示。这样设计的风险是：没看到“布局”选项卡的用户可能误以为分页符是唯一选项。权衡点在于，相比埋在更模糊的“Break”命令下，单独露出的“Page Break”确实更易被发现。<a id="id411"></a><a id="id412"></a>
 
-![“插入”选项卡中的分页符命令](/fig/tpme_0210.png)
-
-###### 图 2-10. “插入”选项卡中的分页符命令 {#page_break_alone}
+{{< fig num="2-10" id="page_break_alone" src="/fig/tpme_0210.png" caption="“插入”选项卡中的分页符命令" alt="“插入”选项卡中的分页符命令" />}}
 
 ### 理解场景 {#id189}
 
@@ -266,19 +249,15 @@ Microsoft Word 服务的人群非常广，从需要章节导航的小说作者�
 
 在没被知识诅咒“感染”的读者看来，功能命名含糊不清的情况其实非常常见。要防止这一点，就做一次换鞋思考，进入用户视角，头脑风暴你的命名可能被如何误解。（或者，再说一遍，直接去问他们。）
 
-当我写“布局”案例并扮演做教会简报的 Yves 时，就被一个歧义惹恼了。我看到“布局”选项卡里有这个 Align 按钮，如 [图 2-11](/en/ch2#layout_menu_align) 右侧所示。
+当我写“布局”案例并扮演做教会简报的 Yves 时，就被一个歧义惹恼了。我看到“布局”选项卡里有这个 Align 按钮，如 {{< xref fig="2-11" page="/ch2" anchor="layout_menu_align" >}}图 2-11{{< /xref >}} 右侧所示。
 
-![Word“布局”选项卡的一部分](/fig/tpme_0211.png)
-
-###### 图 2-11. Word“布局”选项卡的一部分 {#layout_menu_align}
+{{< fig num="2-11" id="layout_menu_align" src="/fig/tpme_0211.png" caption="Word“布局”选项卡的一部分" alt="Word“布局”选项卡的一部分" />}}
 
 你猜它是做什么的？
 
-我本以为它能用来让简报标题居中。然而我展开它后（如 [图 2-12](/en/ch2#align_ambiguity) 所示），所有看起来有用的选项都灰掉了。我试了几种办法让它生效，但都没成功。
+我本以为它能用来让简报标题居中。然而我展开它后（如 {{< xref fig="2-12" page="/ch2" anchor="align_ambiguity" >}}图 2-12{{< /xref >}} 所示），所有看起来有用的选项都灰掉了。我试了几种办法让它生效，但都没成功。
 
-![一个令人困惑的下拉菜单](/fig/tpme_0212.png)
-
-###### 图 2-12. 一个令人困惑的下拉菜单 {#align_ambiguity}
+{{< fig num="2-12" id="align_ambiguity" src="/fig/tpme_0212.png" caption="一个令人困惑的下拉菜单" alt="一个令人困惑的下拉菜单" />}}
 
 如果 *Align* 指的并不是通用文本、图片或图表的对齐，而是更具体的东西，那它就应该明确写出来！
 
@@ -348,15 +327,13 @@ Microsoft Word 服务的人群非常广，从需要章节导航的小说作者�
 
 选一个既便于发现、又能帮助无歧义理解的名字非常难，有时甚至不可能完美传达用户所需的一切信息。<a id="USredun02"></a><a id="redun02"></a>因此，值得用冗余机制来传达你的意图。
 
-看看 Word<a id="id432"></a><a id="id433"></a> 功能区，它有效利用了<a id="id434"></a>图标来表达功能。在 [图 2-13](/en/ch2#home_formatting) 中，你可以看到“开始”选项卡里的这些格式命令；它们经过精心设计，在帮助理解方面优于“multilevel list”“justify”这类纯文字标签。
+看看 Word<a id="id432"></a><a id="id433"></a> 功能区，它有效利用了<a id="id434"></a>图标来表达功能。在 {{< xref fig="2-13" page="/ch2" anchor="home_formatting" >}}图 2-13{{< /xref >}} 中，你可以看到“开始”选项卡里的这些格式命令；它们经过精心设计，在帮助理解方面优于“multilevel list”“justify”这类纯文字标签。
 
-![格式命令图标](/fig/tpme_0213.png)
-
-###### 图 2-13. 格式命令图标 {#home_formatting}
+{{< fig num="2-13" id="home_formatting" src="/fig/tpme_0213.png" caption="格式命令图标" alt="格式命令图标" />}}
 
 下面是一些不只依赖命名、同样能提升理解的方法：
 
-- **图文结合**：图像<a id="id435"></a>可以把文字试图传达的意思可视化，前面的分节符描述就是例子（[图 2-4](/en/ch2#layout_menu)）。也别忘了，并非所有用户都在使用其母语版本产品。对英语母语者来说，“Column”也许很基础，但对其他用户未必属于<a id="id436"></a>常用词汇。
+- **图文结合**：图像<a id="id435"></a>可以把文字试图传达的意思可视化，前面的分节符描述就是例子（{{< xref fig="2-4" page="/ch2" anchor="layout_menu" >}}图 2-4{{< /xref >}}）。也别忘了，并非所有用户都在使用其母语版本产品。对英语母语者来说，“Column”也许很基础，但对其他用户未必属于<a id="id436"></a>常用词汇。
 - **WYSIWYG（所见即所得）**：用户<a id="id437"></a>甚至不需要先理解，因为操作效果会立刻显示出来。Windows 版 Microsoft Office 除了是 WYSIWYG 编辑器外，还提供“实时预览（Live previews）”，可直接看到切换样式对当前文档的影响。
 - **换个说法**：在<a id="id438"></a>工具提示和文档里使用同义表达或改写。用不同措辞复述同一概念，能帮助用户交叉定位其本意并建立信心。
 - **始终提醒上下文**：人的<a id="id439"></a>短时记忆容量有限，容易忘记自己在哪。比如用户正处于电商购买流程中，若他们中途离开再回来，每个页面都应提醒“当前正在购买什么”。
@@ -388,7 +365,7 @@ def email_lunch_invitation(sending_user, recipient_user, message):
 
 ### 使用场景 {#id35}
 
-当读者旅程进入尾声，<a id="id444"></a><a id="id445"></a><a id="id446"></a><a id="id447"></a><a id="id448"></a>开始动手操作时，危险就更大了。安全问题无处不在。我们会在 [第 8 章](/en/ch8#ch08_interaction_design) 引入“可供性”概念时更系统地讨论用户安全；先在这里浅尝一下：看看意符如何在缺乏其他保护措施时，仍能引导人做对的事。好的命名能把用户“导上轨道”，让他们凭直觉做出正确操作，甚至意识不到自己本可能偏离。
+当读者旅程进入尾声，<a id="id444"></a><a id="id445"></a><a id="id446"></a><a id="id447"></a><a id="id448"></a>开始动手操作时，危险就更大了。安全问题无处不在。我们会在 {{< xref page="/ch8" anchor="ch08_interaction_design" >}}第 8 章{{< /xref >}} 引入“可供性”概念时更系统地讨论用户安全；先在这里浅尝一下：看看意符如何在缺乏其他保护措施时，仍能引导人做对的事。好的命名能把用户“导上轨道”，让他们凭直觉做出正确操作，甚至意识不到自己本可能偏离。
 
 请认真推演使用场景，并提醒用户可能的<a id="id449"></a>安全风险。
 
@@ -437,7 +414,7 @@ def email_lunch_invitation(sending_user, recipient_user, message):
 
 更深的问题是，Cookie 本来就是低层编程抽象，而不是面向用户的功能。人们也提出过更好的抽象，比如提供更细粒度、用户更易理解的分类。可惜，可能由于集体行动困境，截至 2025 年，这个问题仍基本无解。
 
-在产品周期较早阶段就尝试命名与组织产品，是一件非常值得做的事。它会迫使你关注完整用户旅程，并常带来有价值的设计洞察。敬请关注第 [7](/en/ch7#ch07_product_discovery_sim) 章和第 [8](/en/ch8#ch08_interaction_design) 章，我们会更深入地探讨产品设计。
+在产品周期较早阶段就尝试命名与组织产品，是一件非常值得做的事。它会迫使你关注完整用户旅程，并常带来有价值的设计洞察。敬请关注第 {{< xref page="/ch7" anchor="ch07_product_discovery_sim" >}}7{{< /xref >}} 章和第 {{< xref page="/ch8" anchor="ch08_interaction_design" >}}8{{< /xref >}} 章，我们会更深入地探讨产品设计。
 
 #### 编码实践 {#id467}
 

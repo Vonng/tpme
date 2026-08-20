@@ -10,7 +10,7 @@ services:
     id: G-MET3N14S7Y
 
 outputs:
-  home: [HTML, markdown, LLMS]
+  home: [HTML, print, markdown, LLMS]
   page: [HTML, markdown]
   section: [HTML, RSS, print, markdown]
 
@@ -48,6 +48,12 @@ languages:
               url: /toc/
               icon: fa-solid fa-list
               keywords: [目录, 章节, 导航]
+            - id: print_book
+              title: 打印整本书
+              description: 打开整书打印视图，可另存为 PDF
+              url: /_print/
+              icon: fa-solid fa-print
+              keywords: [整书, 打印, PDF, print]
 
 markup:
   goldmark:
@@ -63,6 +69,7 @@ markup:
           block: [['\[', '\]'], ['$$', '$$']]
           inline: [['\(', '\)']]
     parser:
+      wrapStandAloneImageWithinParagraph: false
       attribute:
         block: true
         title: true
@@ -106,11 +113,12 @@ params:
   logo: logo.png
   github_repo: https://github.com/Vonng/tpme
   github_subdir: ''
-  offlineSearch: true
-  offlineSearchIndex: summary
-  offlineSearchSummaryLength: 90
-  offlineSearchMaxResults: 12
+  offline_search: true
+  offline_search_index: summary
+  offline_search_summary_length: 90
+  offline_search_max_results: 12
   page_width: wide
+  reading_width: normal
   copyright:
     authors: >-
       中文翻译 [Vonng](https://vonng.com) · 原著 Drew Hoskins ·
@@ -118,9 +126,8 @@ params:
     from_year: 2026
     to_year: present
   ui:
-    typography:
-      preset: system
-    shell_types: [docs]
+    typography: system
+    shell_types: [book]
     docs_section: ''
     quick_links: [contents, preface]
     sidebar_icon_policy: groups
@@ -131,17 +138,19 @@ params:
     sidebar_width_min: 260
     sidebar_width_max: 360
     sidebar_item_overflow: wrap
-    ul_show: 2
+    sidebar_headings: false
+    sidebar_expand_levels: 2
     page_context_menu:
       enable: true
       assistant_links: false
       links: []
-    showLightDarkModeMenu: true
-    image_zoom:
-      enable: true
+    dark_mode: true
+    image_zoom: true
     feedback:
       enable: false
-    readingtime:
-      enable: true
+    reading_time: true
+    pager_types: [book]
+    keyboard_nav: true
+    lastmod_commit: hash
   print:
-    disable_toc: false
+    toc: true

@@ -1,5 +1,7 @@
 ---
-title: "第四部分：定义"
+title: "定义"
+book_kind: part
+book_number: IV
 weight: 400
 breadcrumbs: false
 ---

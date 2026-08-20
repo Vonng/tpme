@@ -1,5 +1,8 @@
 ---
-title: "9. 产品架构"
+title: "产品架构"
+book_kind: chapter
+book_number: "9"
+book_part: IV
 weight: 402
 breadcrumbs: false
 ---
@@ -10,7 +13,7 @@ breadcrumbs: false
 >
 > — Jeff Atwood
 
-*功能性需求* 是<a id="id1013"></a>我们为产品可供性设定的一组目标，即让产品做到用户想做的事。[第 8 章](/en/ch8#ch08_interaction_design)其实一直在讨论如何满足功能性需求，只是当时我们没有这么称呼它。
+*功能性需求* 是<a id="id1013"></a>我们为产品可供性设定的一组目标，即让产品做到用户想做的事。{{< xref page="/ch8" anchor="ch08_interaction_design" >}}第 8 章{{< /xref >}}其实一直在讨论如何满足功能性需求，只是当时我们没有这么称呼它。
 
 如果我们只想到这一层，就会得到软件版的“波将金村”——界面看起来很好，却并不能真正工作。所以<a id="id1014"></a>当我们思考 *非功能性需求*（NFRs）时，就要考虑工程师需要为之设计的关键属性，包括成本、可扩展性、延迟、吞吐量、数据一致性、弹性和可用性。别忘了隐私与安全，尽管本章不展开。
 
@@ -38,7 +41,7 @@ NFRs 是实现目标的手段，而不是用户目标本身；有时它们代表
 
 ### 产品架构的基础 {#id163}
 
-产品架构<a id="PAfound09"></a>与交互设计有关。这是因为内部抽象本身就是微型产品，[第 8 章](/en/ch8#ch08_interaction_design)里关于用例、三次法则、迭代开发等多数经验，同样适用。
+产品架构<a id="PAfound09"></a>与交互设计有关。这是因为内部抽象本身就是微型产品，{{< xref page="/ch8" anchor="ch08_interaction_design" >}}第 8 章{{< /xref >}}里关于用例、三次法则、迭代开发等多数经验，同样适用。
 
 但产品架构有其独特难点，因为非功能性需求很棘手。它们数量很多，而且常常难以同时满足，这意味着我们通常没有足够的时间和预算把它们全部做好。更糟的是，即便时间无限，它们之间也经常互相掣肘——比如：更强的数据复制会增加延迟，安全门槛又可能削弱<a id="id1037"></a>可用性。
 
@@ -69,7 +72,7 @@ NFRs 是实现目标的手段，而不是用户目标本身；有时它们代表
 
 很多<a id="id1041"></a>工程师受过系统问题导向训练，天然会往“解系统问题”上靠。他们容易<a id="id1042"></a>在不必要的加固和过早优化里钻牛角尖。
 
-这叫 *路灯效应*（[图 9-1](/en/ch9#streetlight_effect)）。故事是：一个醉汉在路灯下找丢失的钥匙，尽管他并不是在那里丢的。别人问他为什么在这找，他说：“因为这儿有光。”
+这叫 *路灯效应*（{{< xref fig="9-1" page="/ch9" anchor="streetlight_effect" >}}图 9-1{{< /xref >}}）。故事是：一个醉汉在路灯下找丢失的钥匙，尽管他并不是在那里丢的。别人问他为什么在这找，他说：“因为这儿有光。”
 
 我们的“亮区”，就是我们作为软件工程师的训练背景，以及我们最熟悉的那一角代码。
 
@@ -79,9 +82,7 @@ NFRs 是实现目标的手段，而不是用户目标本身；有时它们代表
 
 一个能让自己保持诚实的实用做法，是把理由写成“对用户的影响”。
 
-![A man looking into the lit area of a street.](/fig/tpme_0901.png)
-
-###### 图 9-1. 路灯效应 {#streetlight_effect}
+{{< fig num="9-1" id="streetlight_effect" src="/fig/tpme_0901.png" caption="路灯效应" alt="A man looking into the lit area of a street." />}}
 
 #### 传达提案对用户的影响 {#id165}
 
@@ -119,11 +120,9 @@ Stripe<a id="id1054"></a><a id="id1055"></a>以极高规模处理在线支付。
 
 我会对我在那里工作时使用过的对象模型做一些修改和简化。Customers 从 Merchants 处在线购买商品。Merchants 拥有一个 Balance，用来追踪其账户中的资金。资金会定期打款给 Merchants；该余额不应为负，例如在向 Customers 处理退款时。
 
-[图 9-2](/en/ch9#stripe_diagram)展示了一个简化数据图，其中连线上的叉号代表一对多关系中的“多”端。图中的方框表示一个相当标准的电商数据模式：Customers 向 Merchants 发起 Payments；Merchants 维护 Balances，用来存储收到的资金并在需要时退款。
+{{< xref fig="9-2" page="/ch9" anchor="stripe_diagram" >}}图 9-2{{< /xref >}}展示了一个简化数据图，其中连线上的叉号代表一对多关系中的“多”端。图中的方框表示一个相当标准的电商数据模式：Customers 向 Merchants 发起 Payments；Merchants 维护 Balances，用来存储收到的资金并在需要时退款。
 
-![A data model diagram for Stripe Payments](/fig/tpme_0902.png)
-
-###### 图 9-2. Stripe Payments 的简化数据模型图 {#stripe_diagram}
+{{< fig num="9-2" id="stripe_diagram" src="/fig/tpme_0902.png" caption="Stripe Payments 的简化数据模型图" alt="A data model diagram for Stripe Payments" />}}
 
 这个设定提供了若干有趣的产品架构挑战；本章我们将带着它一起，审视几组设计权衡。
 
@@ -166,7 +165,7 @@ Stripe<a id="id1054"></a><a id="id1055"></a>以极高规模处理在线支付。
 
 假设我们要在这三个阶段中选一个优先优化。我们手头各有一些方案，能把每个阶段缩短几百毫秒，但实现成本都不低，我们希望先做影响最大的那个。甚至我们还不确定，延迟是不是最大问题之一。
 
-我们真正关心什么？关键用户指标是转化率：从用户把商品加入购物车到最终支付，我们关心有多少比例的人能走完整个流程。我们的产品论题（见[第 6 章](/en/ch6#ch06_target_aud)）是：降低延迟会提升转化率。
+我们真正关心什么？关键用户指标是转化率：从用户把商品加入购物车到最终支付，我们关心有多少比例的人能走完整个流程。我们的产品论题（见{{< xref page="/ch6" anchor="ch06_target_aud" >}}第 6 章{{< /xref >}}）是：降低延迟会提升转化率。
 
 转化率<a id="id1059"></a>是<a id="id1060"></a><a id="id1061"></a>*场景指标*的一个例子，因为它追踪的是用户在某个场景中推进后的结果。
 
@@ -178,11 +177,9 @@ Stripe<a id="id1054"></a><a id="id1055"></a>以极高规模处理在线支付。
 
 *分布式追踪*<a id="id1064"></a>就是这样的桥接技术。每条用户流程都带一个“trace ID”，贯穿所有相关操作。这些操作会带着该 ID 记录事件，我们就能按会话查询全部事件，找出大延迟发生在哪里。然后可以用火焰图或瀑布图可视化。
 
-[图 9-3](/en/ch9#stripe_waterfall)是一个简化图，展示结账流程前两个阶段在不同技术层所花费的时间。
+{{< xref fig="9-3" page="/ch9" anchor="stripe_waterfall" >}}图 9-3{{< /xref >}}是一个简化图，展示结账流程前两个阶段在不同技术层所花费的时间。
 
-![A timeline showing time spent in different systems.](/fig/tpme_0903.png)
-
-###### 图 9-3. 电商结账流程延迟瀑布图 {#stripe_waterfall}
+{{< fig num="9-3" id="stripe_waterfall" src="/fig/tpme_0903.png" caption="电商结账流程延迟瀑布图" alt="A timeline showing time spent in different systems." />}}
 
 当不同抽象层能在同一张图里呈现时，我们最有力量。我们可以从整条 trace“放大”到某个问题点，也能在某个具体失败处“缩小”回它所在的全流程。像分布式追踪这类技术投资，很容易因为“不是天天用”而被推迟；但一旦用上，往往是 100 倍的生产力<a id="id1065"></a>提升。
 
@@ -219,10 +216,9 @@ Stripe<a id="id1054"></a><a id="id1055"></a>以极高规模处理在线支付。
 
 你还会看到像<a id="id1076"></a>*read-your-write* 一致性这样的术语。就产品架构思考而言，我更喜欢它，因为术语里直接包含了用户——“your”。这一节我会按“谁受益”来整理不同一致性保证。我把产品里的参与者分成三组：你（当前用户）、其他用户、系统。
 
-[表 9-1](/en/ch9#consistency_guarantees)展示了你可提供的不同即时一致性保证，从最常见到更强<a id="id1077"></a><a id="id1078"></a>逐步增强。
+{{< xref tbl="9-1" page="/ch9" anchor="consistency_guarantees" >}}表 9-1{{< /xref >}}展示了你可提供的不同即时一致性保证，从最常见到更强<a id="id1077"></a><a id="id1078"></a>逐步增强。
 
-###### 表 9-1. 以用户为中心的一致性保证 {#consistency_guarantees}
-
+{{< tbl num="9-1" id="consistency_guarantees" caption="以用户为中心的一致性保证" >}}
 | 保证 | 含义 |
 | --- | --- |
 | Write your Writes (WyW) | 所有后续写都基于你之前的写。 |
@@ -231,6 +227,7 @@ Stripe<a id="id1054"></a><a id="id1055"></a>以极高规模处理在线支付。
 | Write after others’ Writes (WoW) | 使用产品的其他用户无法在不知晓你写入的前提下写入，反之亦然。 |
 | Read others’ Writes (RoW) | 一旦其他人的写入成功被确认，你会立刻看到其结果。 |
 | Read after system Writes (RsW) | 自动化与智能体做出的编辑一经系统确认就会立刻传播。 |
+{{< /tbl >}}
 
 注意，这些保证是产品功能的属性，而不是数据库本身的属性。数据库通常并不知道“谁在读”，这意味着语义选择要由应用开发者谨慎完成。
 
@@ -295,7 +292,7 @@ Martin Fowler<a id="id1086"></a><a id="lat09"></a><a id="avail09"></a>说过：�
 
 #### 规模模拟 {#id173}
 
-整本书里，我们一直在<a id="Tscale09"></a><a id="Sscale09"></a>模拟单个用户与产品/系统的交互。有时在脑中做，通过用户场景（[第 1 章](/en/ch1#ch01_foundations_prod)）；有时在代码里做，通过场景测试（[第 4 章](/en/ch4#ch04_dogfooding)）；我们也让用户讲述自己的故事（[第 5 章](/en/ch5#ch05_user_feedback)），并在客户发现访谈中模拟这些故事（[第 6 章](/en/ch6#ch06_target_aud)）。
+整本书里，我们一直在<a id="Tscale09"></a><a id="Sscale09"></a>模拟单个用户与产品/系统的交互。有时在脑中做，通过用户场景（{{< xref page="/ch1" anchor="ch01_foundations_prod" >}}第 1 章{{< /xref >}}）；有时在代码里做，通过场景测试（{{< xref page="/ch4" anchor="ch04_dogfooding" >}}第 4 章{{< /xref >}}）；我们也让用户讲述自己的故事（{{< xref page="/ch5" anchor="ch05_user_feedback" >}}第 5 章{{< /xref >}}），并在客户发现访谈中模拟这些故事（{{< xref page="/ch6" anchor="ch06_target_aud" >}}第 6 章{{< /xref >}}）。
 
 但可扩展性动态太大，光靠脑补不够。我们需要更复杂的脚本来测试负载、流量尖峰和容量。
 

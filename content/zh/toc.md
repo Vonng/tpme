@@ -1,11 +1,11 @@
 ---
 title: "目录"
 linkTitle: "目录"
+book_kind: contents
 weight: 10
 search_keywords: [目录, 章节, 阅读导航]
 search_boost: 2
-ui:
-  breadcrumb_disable: true
+breadcrumb: false
 ---
 
 ## [序言](/preface)

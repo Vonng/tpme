@@ -1,5 +1,7 @@
 ---
-title: "第三部分：探索"
+title: "探索"
+book_kind: part
+book_number: III
 weight: 300
 breadcrumbs: false
 ---

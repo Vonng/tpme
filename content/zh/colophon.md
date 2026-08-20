@@ -1,5 +1,6 @@
 ---
 title: "关于作者"
+book_kind: colophon
 weight: 600
 breadcrumbs: false
 ---

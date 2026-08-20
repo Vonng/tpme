@@ -1,5 +1,7 @@
 ---
-title: "第一部分：开发与打磨"
+title: "开发与打磨"
+book_kind: part
+book_number: I
 weight: 100
 breadcrumbs: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: "序言"
+book_kind: preface
 weight: 50
 breadcrumbs: false
 ---
@@ -55,7 +56,7 @@ breadcrumbs: false
 
 ### 本书结构 {#id271}
 
-[第 1 章](/en/ch1#ch01_foundations_prod)包含导论内容，是阅读后续章节的前置基础。
+{{< xref page="/ch1" anchor="ch01_foundations_prod" >}}第 1 章{{< /xref >}}包含导论内容，是阅读后续章节的前置基础。
 
 之后你可以按兴趣或时机，以任意顺序阅读其余章节。不过，如果你没有特别偏好，我已按我建议的次序排列。
 
@@ -72,11 +73,9 @@ breadcrumbs: false
 - **开发（Develop）**：选择并细化实现方案。在这个阶段，我们寻找最佳实现路径，并打磨先前定义的高层产品。
 - **交付（Deliver）**：把产品做出来，验证你做出的结果，交付给客户，并收集反馈。
 
-把这四个阶段连在一起，可视化后如[图 P-1](/en/preface#double_diamond)所示。
+把这四个阶段连在一起，可视化后如{{< xref fig="P-1" page="/preface" anchor="double_diamond" >}}图 P-1{{< /xref >}}所示。
 
-![英国设计委员会对双钻流程模型的示意图](/fig/tpme_0001.png)
-
-###### 图 P-1. 英国设计委员会对双钻流程模型的示意图 {#double_diamond}
+{{< fig num="P-1" id="double_diamond" src="/fig/tpme_0001.png" caption="英国设计委员会对双钻流程模型的示意图" alt="英国设计委员会对双钻流程模型的示意图" />}}
 
 图中它们被表示为沿着两个菱形推进的箭头。在探索与开发阶段，箭头发散，因为我们会并行探索多条线索；而在定义与交付阶段，箭头收敛，因为我们会尝试把这些线索编织成一个紧凑的产品。
 
@@ -98,27 +97,27 @@ breadcrumbs: false
 
 #### 各章概览 {#id4}
 
-- [第 1 章](/en/ch1#ch01_foundations_prod)会介绍<a id="id307"></a>“人物画像（persona）”与“场景（scenario）”这两个核心概念，它们会在全书反复出现，并补充一些用户心理学基础。
+- {{< xref page="/ch1" anchor="ch01_foundations_prod" >}}第 1 章{{< /xref >}}会介绍<a id="id307"></a>“人物画像（persona）”与“场景（scenario）”这两个核心概念，它们会在全书反复出现，并补充一些用户心理学基础。
 
-[第一部分：“开发”](/en/part-i#part1)
+{{< xref page="/part-i" anchor="part1" >}}第一部分：“开发”{{< /xref >}}
 
-- [第 2 章《引导用户使用你的产品》](/en/ch2#ch02_naming)聚焦于具备沟通性、直觉性的产品界面。你将通过有效命名与层级设计的渐进呈现，帮助用户发现、理解并使用你的产品。
-- 在[第 3 章《错误与警告》](/en/ch3#ch03_errors)中，你将学习如何编写可行动的错误信息，并如何设计代码架构，让错误可编程且真正有用。
+- {{< xref page="/ch2" anchor="ch02_naming" >}}第 2 章《引导用户使用你的产品》{{< /xref >}}聚焦于具备沟通性、直觉性的产品界面。你将通过有效命名与层级设计的渐进呈现，帮助用户发现、理解并使用你的产品。
+- 在{{< xref page="/ch3" anchor="ch03_errors" >}}第 3 章《错误与警告》{{< /xref >}}中，你将学习如何编写可行动的错误信息，并如何设计代码架构，让错误可编程且真正有用。
 
-[第二部分：“交付”](/en/part-ii#part2)
+{{< xref page="/part-ii" anchor="part2" >}}第二部分：“交付”{{< /xref >}}
 
-- [第 4 章《亲自体验你的产品》](/en/ch4#ch04_dogfooding)讨论内部试用（dogfooding）自己产品的高效方法，例如编写文档、场景测试和摩擦日志（friction log）。
-- [第 5 章《持续倾听用户》](/en/ch5#ch05_user_feedback)会教你“面向变化而设计”，并基于用户反馈与指标迭代走向成功。
+- {{< xref page="/ch4" anchor="ch04_dogfooding" >}}第 4 章《亲自体验你的产品》{{< /xref >}}讨论内部试用（dogfooding）自己产品的高效方法，例如编写文档、场景测试和摩擦日志（friction log）。
+- {{< xref page="/ch5" anchor="ch05_user_feedback" >}}第 5 章《持续倾听用户》{{< /xref >}}会教你“面向变化而设计”，并基于用户反馈与指标迭代走向成功。
 
-[第三部分：“探索”](/en/part-iii#part3)
+{{< xref page="/part-iii" anchor="part3" >}}第三部分：“探索”{{< /xref >}}
 
-- 在[第 6 章《理解你的目标受众》](/en/ch6#ch06_target_aud)中，你会接触客户，理解他们在寻找什么，并把这种理解共享给整个团队。
-- [第 7 章《通过模拟发现你的产品》](/en/ch7#ch07_product_discovery_sim)会帮助你把用户场景转化为产品需求和优先级计划。
+- 在{{< xref page="/ch6" anchor="ch06_target_aud" >}}第 6 章《理解你的目标受众》{{< /xref >}}中，你会接触客户，理解他们在寻找什么，并把这种理解共享给整个团队。
+- {{< xref page="/ch7" anchor="ch07_product_discovery_sim" >}}第 7 章《通过模拟发现你的产品》{{< /xref >}}会帮助你把用户场景转化为产品需求和优先级计划。
 
-[第四部分：“定义”](/en/part-iv#part4)
+{{< xref page="/part-iv" anchor="part4" >}}第四部分：“定义”{{< /xref >}}
 
-- 在[第 8 章《交互设计》](/en/ch8#ch08_interaction_design)中，我们会深入功能设计细节，帮助你设计出“只用于预期用途、避免被用于不安全用途”的产品。
-- [第 9 章《产品架构》](/en/ch9#ch09_product_architecture)将产品思维应用到吞吐量、数据一致性、延迟等系统层面的关切。
+- 在{{< xref page="/ch8" anchor="ch08_interaction_design" >}}第 8 章《交互设计》{{< /xref >}}中，我们会深入功能设计细节，帮助你设计出“只用于预期用途、避免被用于不安全用途”的产品。
+- {{< xref page="/ch9" anchor="ch09_product_architecture" >}}第 9 章《产品架构》{{< /xref >}}将产品思维应用到吞吐量、数据一致性、延迟等系统层面的关切。
 
 ### 阅读说明 {#id5}
 

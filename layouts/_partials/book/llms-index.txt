@@ -1,0 +1,29 @@
+{{- $isZh := hasPrefix .Site.Language.Lang "zh" -}}
+{{- $indexTitle := cond $isZh "内容索引" "Content index" -}}
+{{- $homeLabel := cond $isZh "首页" "Home" -}}
+{{- $editionsLabel := cond $isZh "语言与版本" "Languages and editions" -}}
+{{- $homeURL := .Site.Home.Permalink -}}
+{{- with .Site.Home.OutputFormats.Get "markdown" }}{{ $homeURL = .Permalink }}{{ end -}}
+# {{ .Site.Title }}
+
+{{ with .Site.Params.description | strings.TrimSpace -}}
+> {{ replace . "\n" "\n> " }}
+
+{{ end -}}
+## {{ $indexTitle }}
+
+- [{{ $homeLabel }}]({{ $homeURL }})
+{{ range .Site.RegularPages.ByWeight -}}
+  {{- $url := .Permalink -}}
+  {{- with .OutputFormats.Get "markdown" }}{{ $url = .Permalink }}{{ end }}
+- [{{ .Title | strings.TrimSpace }}]({{ $url }})
+{{ end -}}
+
+## {{ $editionsLabel }}
+
+{{ range hugo.Sites -}}
+  {{- $home := .Home -}}
+  {{- $url := $home.Permalink -}}
+  {{- with $home.OutputFormats.Get "markdown" }}{{ $url = .Permalink }}{{ end }}
+- [{{ $home.Language.Label }}]({{ $url }})
+{{ end -}}
