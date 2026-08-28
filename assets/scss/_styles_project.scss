@@ -3,8 +3,6 @@
 // responsibility for navigation, search, print, and output behavior.
 
 :root {
-  --tpme-serif: 'Iowan Old Style', 'Noto Serif CJK SC', 'Source Han Serif SC',
-    'Songti SC', STSong, Georgia, serif;
   --tpme-brown: #8a5a34;
   --tpme-green: #365e57;
   --tpme-surface: color-mix(in srgb, var(--bs-body-bg) 94%, var(--tpme-brown));
@@ -18,12 +16,7 @@
 
 // Book shell ---------------------------------------------------------------
 
-body.td-book {
-  --td-body-font-family: var(--tpme-serif);
-}
-
 .td-book .td-content {
-  font-family: var(--td-body-font-family);
   font-size: clamp(1rem, calc(0.97rem + 0.12vw), 1.07rem);
   line-height: 1.86;
   text-wrap: pretty;
@@ -270,7 +263,6 @@ body.td-book {
   border: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--tpme-brown) 34%, var(--td-line));
   color: var(--td-ink);
-  font-family: var(--tpme-serif);
   text-align: center;
 }
 
@@ -279,7 +271,6 @@ body.td-book {
   display: block;
   height: 0.72em;
   color: color-mix(in srgb, var(--tpme-brown) 62%, transparent);
-  font-family: Georgia, serif;
   font-size: 5rem;
   line-height: 1;
 }
@@ -302,7 +293,6 @@ body.td-book {
   position: relative;
   z-index: 1;
   color: color-mix(in srgb, var(--td-ink) 88%, var(--td-soft));
-  font-family: var(--tpme-serif);
   font-size: clamp(1rem, 1.4vw, 1.08rem);
   line-height: 1.96;
   text-align: justify;
