@@ -21,6 +21,7 @@ columns:
       - { label: Drew Hoskins, url: 'https://drewhoskins.substack.com/', external: true }
       - { label: 冯若航 / Vonng, url: 'https://vonng.com', external: true }
       - { label: 英文原版, url: 'https://learning.oreilly.com/library/view/the-product-minded-engineer/9781098173722/', external: true }
+      - { label: PGSQL.CC, url: 'https://pgsql.cc/', external: true }
   - title: 项目
     links:
       - { label: GitHub 仓库, url: 'https://github.com/Vonng/tpme', external: true }
