@@ -127,6 +127,8 @@ params:
     to_year: present
   ui:
     typography: system
+    preset: paper
+    preset_menu: [paper, slate, ink, terminal]
     shell_types: [book]
     docs_section: ''
     quick_links: [contents, preface]
