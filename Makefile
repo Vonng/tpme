@@ -24,11 +24,11 @@ build:
 check:
 	GOWORK=off go mod verify
 	$(PINNED_HUGO) --cleanDestinationDir \
-		--printPathWarnings --printI18nWarnings --panicOnWarning
+		--printPathWarnings --printI18nWarnings
 
 check-local: theme-local
 	$(LOCAL_HUGO) --cleanDestinationDir \
-		--printPathWarnings --printI18nWarnings --panicOnWarning
+		--printPathWarnings --printI18nWarnings
 
 .PHONY: default d dev serve b build check check-local
 

@@ -14,7 +14,8 @@
 
 ## 本地开发
 
-`make dev` 使用 `~/pgsty/oink` 的当前工作树，要求 Hugo Extended 0.166.0。
+`make dev` 使用 `~/pgsty/oink` 的当前工作树，要求 Hugo Extended 0.168.0。
+
 可用 `make dev OINK_LOCAL=/path/to/oink PORT=1314` 指定主题目录和端口。
 开发入口禁用 Go/Hugo workspace，并绕过 OINK 的 vendor 副本；`make build`、
 `make check` 和已有的生产预览入口使用 `go.mod` 中固定的版本。
