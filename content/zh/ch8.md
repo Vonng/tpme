@@ -37,6 +37,7 @@ Don Norman<a id="id917"></a><a id="id918"></a>在其经典著作 *The Design of 
 | normal method (Python) | yes | yes |  |
 | underscored method (Python) | yes | no | 技术上可调用，但前导下划线在提醒人们不要调用。 |
 | publicly accessible method that fails because it’s not implemented | no | yes | 看起来提供了，实际上不可用。 |
+{.wide .expand}
 {{< /tbl >}}
 
 意符和可供性通常相伴出现。在在线单选题里，单选按钮意味着最多只能选一项；而一组复选框意味着可以多选。不同语义会对应标准化的视觉模式。
