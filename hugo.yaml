@@ -17,9 +17,6 @@ outputs:
 module:
   imports:
     - path: github.com/pgsty/oink
-  hugoVersion:
-    extended: true
-    min: 0.168.0
 
 languages:
   zh:

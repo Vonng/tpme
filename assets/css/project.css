@@ -1,30 +1,25 @@
-// TPME publication layer ----------------------------------------------------
-// The cover's warm otter brown becomes an editorial accent while OINK keeps
-// responsibility for navigation, search, print, and output behavior.
-
+@charset "UTF-8";
 :root {
   --tpme-brown: #8a5a34;
   --tpme-green: #365e57;
   --tpme-surface: color-mix(in srgb, var(--bs-body-bg) 94%, var(--tpme-brown));
 }
 
-[data-bs-theme='dark'] {
+[data-bs-theme=dark] {
   --tpme-brown: #d5a06c;
   --tpme-green: #78aaa0;
   --tpme-surface: color-mix(in srgb, var(--bs-body-bg) 90%, white);
 }
 
-// Book shell ---------------------------------------------------------------
-
 .td-book .td-content {
-  font-size: clamp(1rem, calc(0.97rem + 0.12vw), 1.07rem);
+  font-size: clamp(1rem, 0.97rem + 0.12vw, 1.07rem);
   line-height: 1.86;
   text-wrap: pretty;
 }
 
-.td-book .td-content > h1 {
+.td-book .td-content > h1, .td-book .td-content > .h1 {
   font-family: var(--td-heading-font-family);
-  font-size: clamp(2rem, calc(1.7rem + 1.35vw), 3rem);
+  font-size: clamp(2rem, 1.7rem + 1.35vw, 3rem);
   letter-spacing: -0.025em;
   line-height: 1.16;
 }
@@ -34,13 +29,13 @@
   color: var(--tpme-brown);
 }
 
-.td-book .td-content > :where(h2, h3, h4, h5, h6) {
+.td-book .td-content > :where(h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
   font-family: var(--td-heading-font-family);
   line-height: 1.38;
   text-wrap: balance;
 }
 
-.td-book .td-content > h2 {
+.td-book .td-content > h2, .td-book .td-content > .h2 {
   margin-block-start: 3.4rem;
   padding-block-end: 0.5rem;
   border-block-end: 1px solid var(--bs-border-color);
@@ -113,11 +108,9 @@
   text-underline-offset: 0.18em;
 }
 
-// Cover and homepage -------------------------------------------------------
-
 .td-landing-hero__media {
   max-width: 340px;
-  aspect-ratio: 400 / 525;
+  aspect-ratio: 400/525;
   border-radius: 0.35rem 0.9rem 0.9rem 0.35rem;
   filter: drop-shadow(0 26px 32px rgba(54, 37, 24, 0.22));
   transform: none;
@@ -128,9 +121,7 @@
 }
 
 .tpme-people {
-  background:
-    radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--tpme-green) 9%, transparent), transparent 34%),
-    color-mix(in srgb, var(--bs-secondary-bg) 38%, transparent);
+  background: radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--tpme-green) 9%, transparent), transparent 34%), color-mix(in srgb, var(--bs-secondary-bg) 38%, transparent);
 }
 
 .tpme-people .td-landing-card {
@@ -143,7 +134,7 @@
 }
 
 .tpme-people .book-person__portrait {
-  grid-row: 1 / 5;
+  grid-row: 1/5;
   display: flex;
   width: 108px;
   flex-direction: column;
@@ -189,6 +180,7 @@
 
 .tpme-people .td-landing-card__meta,
 .tpme-people .td-landing-card h3,
+.tpme-people .td-landing-card .h3,
 .tpme-people .td-landing-card__description,
 .tpme-people .td-landing-card-link {
   grid-column: 2;
@@ -204,7 +196,7 @@
   text-transform: none;
 }
 
-.tpme-people .td-landing-card h3 {
+.tpme-people .td-landing-card h3, .tpme-people .td-landing-card .h3 {
   margin-bottom: 10px;
   font-size: clamp(1.25rem, 2vw, 1.58rem);
 }
@@ -219,9 +211,7 @@
 }
 
 .tpme-preface {
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--tpme-brown) 8%, transparent), transparent 44%),
-    var(--bs-body-bg);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--tpme-brown) 8%, transparent), transparent 44%), var(--bs-body-bg);
 }
 
 .tpme-preface .td-landing-section__head {
@@ -229,7 +219,7 @@
   max-width: none;
 }
 
-.tpme-preface .td-landing-section__head h2 {
+.tpme-preface .td-landing-section__head h2, .tpme-preface .td-landing-section__head .h2 {
   max-width: none;
   font-size: clamp(1.55rem, 4vw, 3.05rem);
   line-height: 1.14;
@@ -247,7 +237,7 @@
 }
 
 .tpme-preface .td-landing-markdown::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 12px;
   pointer-events: none;
@@ -267,7 +257,7 @@
 }
 
 .tpme-preface .td-landing-markdown blockquote::before {
-  content: '“';
+  content: "“";
   display: block;
   height: 0.72em;
   color: color-mix(in srgb, var(--tpme-brown) 62%, transparent);
@@ -325,17 +315,17 @@
   color: var(--tpme-brown);
 }
 
-.tpme-chapters .td-landing-card h3 {
+.tpme-chapters .td-landing-card h3, .tpme-chapters .td-landing-card .h3 {
   margin-bottom: 16px;
   font-size: 1.22rem;
 }
 
-.tpme-chapters .td-landing-card h3 a {
+.tpme-chapters .td-landing-card h3 a, .tpme-chapters .td-landing-card .h3 a {
   color: var(--td-ink);
 }
 
-.tpme-chapters .td-landing-card h3 a::after {
-  content: ' →';
+.tpme-chapters .td-landing-card h3 a::after, .tpme-chapters .td-landing-card .h3 a::after {
+  content: " →";
   color: var(--tpme-brown);
 }
 
@@ -370,9 +360,7 @@
 }
 
 .tpme-legal {
-  background:
-    radial-gradient(circle at 88% 20%, color-mix(in srgb, var(--tpme-green) 10%, transparent), transparent 34%),
-    color-mix(in srgb, var(--bs-body-bg) 88%, var(--bs-secondary-bg));
+  background: radial-gradient(circle at 88% 20%, color-mix(in srgb, var(--tpme-green) 10%, transparent), transparent 34%), color-mix(in srgb, var(--bs-body-bg) 88%, var(--bs-secondary-bg));
 }
 
 .tpme-legal .td-landing-card {
@@ -410,80 +398,63 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (max-width: 760px) {
   .td-landing-hero__media {
     max-width: 220px;
     justify-self: center;
   }
-
   .tpme-people .td-landing-card {
     grid-template-columns: 88px minmax(0, 1fr);
     gap: 0 18px;
   }
-
   .tpme-people .td-landing-card__media {
     width: 88px;
     height: 88px;
   }
-
   .tpme-people .book-person__portrait {
     width: 88px;
   }
-
   .tpme-chapters .td-landing-card-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-
 @media (max-width: 560px) {
   .tpme-people .td-landing-card {
     display: flex;
     align-items: flex-start;
   }
-
   .tpme-people .book-person__portrait,
   .tpme-people .td-landing-card__media {
     width: 92px;
   }
-
   .tpme-people .book-person__portrait {
     margin-bottom: 18px;
   }
-
   .tpme-people .td-landing-card__media {
     height: 92px;
   }
-
-  .tpme-people .td-landing-card h3 {
+  .tpme-people .td-landing-card h3, .tpme-people .td-landing-card .h3 {
     order: 1;
   }
-
   .tpme-people .td-landing-card__meta {
     order: 2;
   }
-
   .tpme-people .td-landing-card__description {
     order: 3;
   }
-
   .tpme-people .td-landing-card-link {
     order: 4;
   }
-
   .tpme-preface .td-landing-markdown {
     padding: 34px 24px;
   }
-
   .tpme-preface .td-landing-markdown::after {
     inset: 8px;
   }
-
   .tpme-preface .td-landing-markdown > p {
     text-align: start;
   }
 }
-
 @media print {
   .td-book-figure {
     max-width: none;
